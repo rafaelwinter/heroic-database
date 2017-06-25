@@ -9,6 +9,7 @@
 #import "HBTestCase.h"
 #import "HBCharacterDataWrapper.h"
 #import "HBCharacterDataContainer.h"
+#import "HBCharacter.h"
 
 @interface HBCharacterModelTests : HBTestCase
 
@@ -63,6 +64,29 @@
     XCTAssertEqual(20, SUT.limit);
     XCTAssertEqual(1485, SUT.total);
     XCTAssertEqual(20, SUT.count);
+}
+
+- (void)testCharacterShouldLoadFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"Character"];
+    
+    NSError *err;
+    HBCharacter *SUT = [[HBCharacter alloc] initWithString:contents
+                                                     error:&err];
+    
+    XCTAssertNil(err, "%@", [err localizedDescription]);
+    XCTAssertNotNil(SUT, @"Could not initialize HBCharacter with JSON data.");
+}
+
+- (void)testCharacterShouldLoadFieldsFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"Character"];
+    
+    NSError *err;
+    HBCharacter *SUT = [[HBCharacter alloc] initWithString:contents
+                                                     error:&err];
+    
+    XCTAssertEqual(1011334, SUT.characterId);
+    XCTAssertEqualObjects(@"3-D Man", SUT.name);
+    XCTAssertEqualObjects(@"A man within three dimensions", SUT.shortBio);
 }
 
 @end

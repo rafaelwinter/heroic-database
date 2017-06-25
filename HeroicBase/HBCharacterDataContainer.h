@@ -8,6 +8,8 @@
 
 #import <JSONModel/JSONModel.h>
 
+@protocol HBCharacter;
+
 @interface HBCharacterDataContainer : JSONModel
 
 /**
@@ -33,6 +35,6 @@
 /**
  The list of characters returned by the call.
  */
-@property (strong, nonatomic) NSArray <id> *results;
+@property (strong, nonatomic) NSArray <HBCharacter> *results;
 
 @end
