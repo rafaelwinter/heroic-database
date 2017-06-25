@@ -16,6 +16,7 @@
 		61ADD0511F00186600E254D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0501F00186600E254D3 /* Assets.xcassets */; };
 		61ADD0541F00186600E254D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0521F00186600E254D3 /* LaunchScreen.storyboard */; };
 		61ADD05F1F00186700E254D3 /* HeroicBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD05E1F00186700E254D3 /* HeroicBaseTests.m */; };
+		61ADD06A1F00237400E254D3 /* HBTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0691F00237400E254D3 /* HBTestCase.m */; };
 		F92C2DC03EAA912B4E082B6E /* libPods-HeroicBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		61ADD05A1F00186700E254D3 /* HeroicBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroicBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61ADD05E1F00186700E254D3 /* HeroicBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroicBaseTests.m; sourceTree = "<group>"; };
 		61ADD0601F00186700E254D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61ADD0691F00237400E254D3 /* HBTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTestCase.m; sourceTree = "<group>"; };
+		61ADD06B1F00239700E254D3 /* HBTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTestCase.h; sourceTree = "<group>"; };
 		6E8EEDA06C1B172FE0EDC013 /* Pods-HeroicBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroicBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE69406FC5A1FA3D8F10CB7 /* Pods-HeroicBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 			children = (
 				61ADD05E1F00186700E254D3 /* HeroicBaseTests.m */,
 				61ADD0601F00186700E254D3 /* Info.plist */,
+				61ADD06B1F00239700E254D3 /* HBTestCase.h */,
+				61ADD0691F00237400E254D3 /* HBTestCase.m */,
 			);
 			path = HeroicBaseTests;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 		61ADD0361F00186600E254D3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HB;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Rafael Winter";
 				TargetAttributes = {
@@ -361,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61ADD05F1F00186700E254D3 /* HeroicBaseTests.m in Sources */,
+				61ADD06A1F00237400E254D3 /* HBTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +562,7 @@
 				61ADD0651F00186700E254D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61ADD0661F00186700E254D3 /* Build configuration list for PBXNativeTarget "HeroicBaseTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +571,7 @@
 				61ADD0681F00186700E254D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
