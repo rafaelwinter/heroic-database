@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131CC07C20186CB112C14D22 /* libPods-HeroicBaseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E439964DC14ABED2A61BA0 /* libPods-HeroicBaseTests.a */; };
 		61ADD0431F00186600E254D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0421F00186600E254D3 /* main.m */; };
 		61ADD0461F00186600E254D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0451F00186600E254D3 /* AppDelegate.m */; };
 		61ADD0491F00186600E254D3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0481F00186600E254D3 /* MasterViewController.m */; };
@@ -15,6 +16,7 @@
 		61ADD0511F00186600E254D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0501F00186600E254D3 /* Assets.xcassets */; };
 		61ADD0541F00186600E254D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0521F00186600E254D3 /* LaunchScreen.storyboard */; };
 		61ADD05F1F00186700E254D3 /* HeroicBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD05E1F00186700E254D3 /* HeroicBaseTests.m */; };
+		F92C2DC03EAA912B4E082B6E /* libPods-HeroicBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C611258C5241D19EB186C7 /* Pods-HeroicBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase.release.xcconfig"; sourceTree = "<group>"; };
 		61ADD03E1F00186600E254D3 /* HeroicBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroicBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61ADD0421F00186600E254D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61ADD0441F00186600E254D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +46,11 @@
 		61ADD05A1F00186700E254D3 /* HeroicBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroicBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61ADD05E1F00186700E254D3 /* HeroicBaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroicBaseTests.m; sourceTree = "<group>"; };
 		61ADD0601F00186700E254D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E8EEDA06C1B172FE0EDC013 /* Pods-HeroicBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroicBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DE69406FC5A1FA3D8F10CB7 /* Pods-HeroicBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase.debug.xcconfig"; sourceTree = "<group>"; };
+		AF12FA314B139A07F40479C8 /* Pods-HeroicBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		F2E439964DC14ABED2A61BA0 /* libPods-HeroicBaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroicBaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F92C2DC03EAA912B4E082B6E /* libPods-HeroicBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,18 +66,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131CC07C20186CB112C14D22 /* libPods-HeroicBaseTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61AB166673E3AD6D0D6BF188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */,
+				F2E439964DC14ABED2A61BA0 /* libPods-HeroicBaseTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61ADD0351F00186600E254D3 = {
 			isa = PBXGroup;
 			children = (
 				61ADD0401F00186600E254D3 /* HeroicBase */,
 				61ADD05D1F00186700E254D3 /* HeroicBaseTests */,
 				61ADD03F1F00186600E254D3 /* Products */,
+				C9CC6C8896B971132091D04D /* Pods */,
+				61AB166673E3AD6D0D6BF188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +137,17 @@
 			path = HeroicBaseTests;
 			sourceTree = "<group>";
 		};
+		C9CC6C8896B971132091D04D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DE69406FC5A1FA3D8F10CB7 /* Pods-HeroicBase.debug.xcconfig */,
+				01C611258C5241D19EB186C7 /* Pods-HeroicBase.release.xcconfig */,
+				6E8EEDA06C1B172FE0EDC013 /* Pods-HeroicBaseTests.debug.xcconfig */,
+				AF12FA314B139A07F40479C8 /* Pods-HeroicBaseTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61ADD0631F00186700E254D3 /* Build configuration list for PBXNativeTarget "HeroicBase" */;
 			buildPhases = (
+				D033EA59438A562DB2A10DF9 /* [CP] Check Pods Manifest.lock */,
 				61ADD03A1F00186600E254D3 /* Sources */,
 				61ADD03B1F00186600E254D3 /* Frameworks */,
 				61ADD03C1F00186600E254D3 /* Resources */,
+				FC9A526D4C0394CB24A72F27 /* [CP] Embed Pods Frameworks */,
+				DE3ADCB224CDA894ACFE73C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61ADD0661F00186700E254D3 /* Build configuration list for PBXNativeTarget "HeroicBaseTests" */;
 			buildPhases = (
+				F396466DA8B83EF39C8453E5 /* [CP] Check Pods Manifest.lock */,
 				61ADD0561F00186700E254D3 /* Sources */,
 				61ADD0571F00186700E254D3 /* Frameworks */,
 				61ADD0581F00186700E254D3 /* Resources */,
+				9B07849C81D6AB3B74D8E7AA /* [CP] Embed Pods Frameworks */,
+				BA8213904BA563DEB08702B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +250,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B07849C81D6AB3B74D8E7AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA8213904BA563DEB08702B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D033EA59438A562DB2A10DF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3ADCB224CDA894ACFE73C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F396466DA8B83EF39C8453E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC9A526D4C0394CB24A72F27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61ADD03A1F00186600E254D3 /* Sources */ = {
@@ -357,6 +488,7 @@
 		};
 		61ADD0641F00186700E254D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DE69406FC5A1FA3D8F10CB7 /* Pods-HeroicBase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroicBase/Info.plist;
@@ -368,6 +500,7 @@
 		};
 		61ADD0651F00186700E254D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C611258C5241D19EB186C7 /* Pods-HeroicBase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HeroicBase/Info.plist;
@@ -379,6 +512,7 @@
 		};
 		61ADD0671F00186700E254D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E8EEDA06C1B172FE0EDC013 /* Pods-HeroicBaseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HeroicBaseTests/Info.plist;
@@ -391,6 +525,7 @@
 		};
 		61ADD0681F00186700E254D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF12FA314B139A07F40479C8 /* Pods-HeroicBaseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HeroicBaseTests/Info.plist;
