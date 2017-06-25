@@ -19,6 +19,8 @@
 		61ADD06D1F0028AE00E254D3 /* HBCharacterModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD06C1F0028AE00E254D3 /* HBCharacterModelTests.m */; };
 		61ADD0701F002C0C00E254D3 /* HBCharacterDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD06F1F002C0C00E254D3 /* HBCharacterDataWrapper.m */; };
 		61ADD0731F002C7800E254D3 /* CharacterDataWrapper.json in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0721F002C7800E254D3 /* CharacterDataWrapper.json */; };
+		61ADD0761F00372400E254D3 /* CharacterDataContainer.json in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0751F00372400E254D3 /* CharacterDataContainer.json */; };
+		61ADD0791F00378D00E254D3 /* HBCharacterDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0781F00378D00E254D3 /* HBCharacterDataContainer.m */; };
 		F92C2DC03EAA912B4E082B6E /* libPods-HeroicBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,9 @@
 		61ADD06E1F002C0C00E254D3 /* HBCharacterDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCharacterDataWrapper.h; sourceTree = "<group>"; };
 		61ADD06F1F002C0C00E254D3 /* HBCharacterDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCharacterDataWrapper.m; sourceTree = "<group>"; };
 		61ADD0721F002C7800E254D3 /* CharacterDataWrapper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CharacterDataWrapper.json; path = Data/CharacterDataWrapper.json; sourceTree = "<group>"; };
+		61ADD0751F00372400E254D3 /* CharacterDataContainer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CharacterDataContainer.json; path = Data/CharacterDataContainer.json; sourceTree = "<group>"; };
+		61ADD0771F00378D00E254D3 /* HBCharacterDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCharacterDataContainer.h; sourceTree = "<group>"; };
+		61ADD0781F00378D00E254D3 /* HBCharacterDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCharacterDataContainer.m; sourceTree = "<group>"; };
 		6E8EEDA06C1B172FE0EDC013 /* Pods-HeroicBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroicBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE69406FC5A1FA3D8F10CB7 /* Pods-HeroicBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +159,8 @@
 			children = (
 				61ADD06E1F002C0C00E254D3 /* HBCharacterDataWrapper.h */,
 				61ADD06F1F002C0C00E254D3 /* HBCharacterDataWrapper.m */,
+				61ADD0771F00378D00E254D3 /* HBCharacterDataContainer.h */,
+				61ADD0781F00378D00E254D3 /* HBCharacterDataContainer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				61ADD0721F002C7800E254D3 /* CharacterDataWrapper.json */,
+				61ADD0751F00372400E254D3 /* CharacterDataContainer.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61ADD0731F002C7800E254D3 /* CharacterDataWrapper.json in Resources */,
+				61ADD0761F00372400E254D3 /* CharacterDataContainer.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +392,7 @@
 				61ADD0461F00186600E254D3 /* AppDelegate.m in Sources */,
 				61ADD0491F00186600E254D3 /* MasterViewController.m in Sources */,
 				61ADD0431F00186600E254D3 /* main.m in Sources */,
+				61ADD0791F00378D00E254D3 /* HBCharacterDataContainer.m in Sources */,
 				61ADD04C1F00186600E254D3 /* DetailViewController.m in Sources */,
 				61ADD0701F002C0C00E254D3 /* HBCharacterDataWrapper.m in Sources */,
 			);

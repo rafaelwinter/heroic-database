@@ -8,6 +8,8 @@
 
 #import <JSONModel/JSONModel.h>
 
+@class HBCharacterDataContainer;
+
 @interface HBCharacterDataWrapper : JSONModel
 
 /**
@@ -41,6 +43,6 @@
 /**
  The results returned by the call.
  */
-@property (strong, nonatomic) id <Optional> data;
+@property (strong, nonatomic) HBCharacterDataContainer <Optional> *data;
 
 @end
