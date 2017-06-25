@@ -7,6 +7,7 @@
 //
 
 #import "HBTestCase.h"
+#import "HBCharacterDataWrapper.h"
 
 @interface HBCharacterModelTests : HBTestCase
 
@@ -15,11 +16,14 @@
 @implementation HBCharacterModelTests
 
 - (void)testCharacterDataWrapperShouldLoadFromJSON {
-    NSString *contents = [self loadJSONFromResource:@""];
+    NSString *contents = [self loadJSONFromResource:@"CharacterDataWrapper"];
     
     NSError *err;
+    HBCharacterDataWrapper *SUT = [[HBCharacterDataWrapper alloc] initWithString:contents
+                                                                           error:&err];
     
-    XCTFail(@"Not implemented");
+    XCTAssertNil(err, "%@", [err localizedDescription]);
+    XCTAssertNotNil(SUT, @"Could not initialize HBCharacterDataWrapper with JSON data.");
 }
 
 @end
