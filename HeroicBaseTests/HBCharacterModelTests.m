@@ -89,4 +89,23 @@
     XCTAssertEqualObjects(@"A man within three dimensions", SUT.shortBio);
 }
 
+- (void)testGetCharactersResponseDataShouldLoadFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"GetCharacterResponseData"];
+    
+    NSError *err;
+    HBCharacterDataWrapper *SUT = [[HBCharacterDataWrapper alloc] initWithString:contents
+                                                                           error:&err];
+
+    HBCharacterDataContainer *container = SUT.data;
+    XCTAssert([container isKindOfClass:[HBCharacterDataContainer class]]);
+    
+    NSArray *results = container.results;
+    XCTAssert([results isKindOfClass:[NSArray class]]);
+    XCTAssertEqual(container.count, results.count);
+    
+    for (HBCharacter *character in results) {
+        XCTAssert([character isKindOfClass:[HBCharacter class]]);
+    }
+}
+
 @end
