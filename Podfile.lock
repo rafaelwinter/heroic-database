@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - JSONModel (1.7.0)
+  - MD5Digest (1.1.0)
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -32,13 +33,15 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - JSONModel
+  - MD5Digest
   - OHHTTPStubs
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  MD5Digest: fea371215507cfcdc3c9633d02cffc7fd075ebc3
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
 
-PODFILE CHECKSUM: 3dbe433a42845c78f7bfe984478286ff1e69d527
+PODFILE CHECKSUM: 73dc8ebc743d97996dd7ca0fea99ec976773331a
 
 COCOAPODS: 1.2.1
