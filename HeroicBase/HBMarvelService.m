@@ -9,12 +9,13 @@
 #import <MD5Digest/NSString+MD5.h>
 
 #import "HBMarvelService.h"
+#import "HBCharacterDataWrapper.h"
 
 static NSString *const kApiKeysFile = @"apikeys";
 static NSString *const kPublicKeyName = @"HBMarvelServicePublicKey";
 static NSString *const kPrivateKeyName = @"HBMarvelServicePrivateKey";
 static NSString *const kBaseURL = @"https://gateway.marvel.com/v1/public/";
-static NSString *const kCharactersResource = @"characters/";
+static NSString *const kCharactersResource = @"characters";
 
 @interface HBMarvelService ()
 
@@ -57,6 +58,59 @@ static NSString *const kCharactersResource = @"characters/";
     return self;
 }
 
+- (NSURLSessionDataTask *)characterListWithTimestamp:(NSTimeInterval)timestamp
+                                              APIKey:(NSString *)publicKey
+                                                hash:(NSString *)hash
+                                             success:(HBCharacterRequestSuccess)successBlock
+                                             failure:(HBCharacterRequestFailure)failureBlock
+{
+    void (^onSuccess)(NSURLSessionDataTask*, id) = ^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSError *error;
+        
+        if (error) {
+            if (failureBlock) {
+                failureBlock(error);
+            }
+        } else {
+            if (successBlock) {
+                successBlock(responseObject);
+            }
+        }
+    };
+    
+    void (^onFailure)(NSURLSessionDataTask*, NSError*) = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    };
+    
+    NSDictionary *params = [self buildParametersWithTimestamp:timestamp
+                                                    publicKey:publicKey
+                                                         hash:hash];
+    
+    return [self GET:kCharactersResource
+          parameters:params
+            progress:nil
+             success:onSuccess
+             failure:onFailure];
+}
+
+- (NSURLSessionDataTask *)characterListWithSuccess:(HBCharacterRequestSuccess)successBlock
+                                           failure:(HBCharacterRequestFailure)failureBlock
+{
+    NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString *hash = [self buildHashForTimestamp:timestamp
+                                      privateKey:self.privateAPIKey
+                                       publicKey:self.publicAPIKey];
+    
+    return [self characterListWithTimestamp:timestamp
+                                     APIKey:self.publicAPIKey
+                                       hash:hash
+                                    success:successBlock
+                                    failure:failureBlock];
+}
+
 #pragma mark - Request signing helpers
 
 /**
@@ -88,6 +142,23 @@ static NSString *const kCharactersResource = @"characters/";
     NSString *hash = [hs MD5Digest];
     
     return hash;
+}
+
+/**
+ Build the authentication parameters used in the requests query string.
+
+ @return A NSDictionary object with the parameters.
+ */
+- (NSDictionary *)buildParametersWithTimestamp:(NSTimeInterval)timestamp
+                                     publicKey:(NSString *)publicKey
+                                          hash:(NSString *)hash {
+    NSDictionary *parameters = @{
+        @"apikey": publicKey,
+        @"ts": @(timestamp),
+        @"hash": hash,
+    };
+    
+    return parameters;
 }
 
 @end
