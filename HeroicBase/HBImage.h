@@ -20,4 +20,14 @@
  */
 @property (strong, nonatomic) NSString *extension;
 
+/**
+ The full path to a medium square image variant.
+ */
+@property (readonly, nonatomic) NSString <Ignore> *standardMediumPath;
+
+/**
+ The full path to a large landscape image variant.
+ */
+@property (readonly, nonatomic) NSString <Ignore> *landscapeIncrediblePath;
+
 @end

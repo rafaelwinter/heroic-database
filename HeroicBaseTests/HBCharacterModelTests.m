@@ -134,4 +134,24 @@
     XCTAssertEqualObjects(@"jpg", SUT.extension);
 }
 
+- (void)testImageShouldGenerateSquarePathFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"Image"];
+    
+    NSError *err;
+    HBImage *SUT = [[HBImage alloc] initWithString:contents
+                                             error:&err];
+    
+    XCTAssertEqualObjects(@"http://i.annihil.us/u/prod/marvel/i/mg/a/f0/5202887448860/standard_medium.jpg", SUT.standardMediumPath);
+}
+
+- (void)testImageShouldGenerateLandscapePathFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"Image"];
+    
+    NSError *err;
+    HBImage *SUT = [[HBImage alloc] initWithString:contents
+                                             error:&err];
+    
+    XCTAssertEqualObjects(@"http://i.annihil.us/u/prod/marvel/i/mg/a/f0/5202887448860/landscape_incredible.jpg", SUT.landscapeIncrediblePath);
+}
+
 @end
