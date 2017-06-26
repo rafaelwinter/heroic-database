@@ -11,7 +11,7 @@
 		61ADD0431F00186600E254D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0421F00186600E254D3 /* main.m */; };
 		61ADD0461F00186600E254D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0451F00186600E254D3 /* AppDelegate.m */; };
 		61ADD0491F00186600E254D3 /* HBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0481F00186600E254D3 /* HBMasterViewController.m */; };
-		61ADD04C1F00186600E254D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD04B1F00186600E254D3 /* DetailViewController.m */; };
+		61ADD04C1F00186600E254D3 /* HBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD04B1F00186600E254D3 /* HBDetailViewController.m */; };
 		61ADD04F1F00186600E254D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD04D1F00186600E254D3 /* Main.storyboard */; };
 		61ADD0511F00186600E254D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0501F00186600E254D3 /* Assets.xcassets */; };
 		61ADD0541F00186600E254D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0521F00186600E254D3 /* LaunchScreen.storyboard */; };
@@ -51,8 +51,8 @@
 		61ADD0451F00186600E254D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		61ADD0471F00186600E254D3 /* HBMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMasterViewController.h; sourceTree = "<group>"; };
 		61ADD0481F00186600E254D3 /* HBMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMasterViewController.m; sourceTree = "<group>"; };
-		61ADD04A1F00186600E254D3 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		61ADD04B1F00186600E254D3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		61ADD04A1F00186600E254D3 /* HBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBDetailViewController.h; sourceTree = "<group>"; };
+		61ADD04B1F00186600E254D3 /* HBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBDetailViewController.m; sourceTree = "<group>"; };
 		61ADD04E1F00186600E254D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61ADD0501F00186600E254D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61ADD0531F00186600E254D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				61ADD0451F00186600E254D3 /* AppDelegate.m */,
 				61ADD0471F00186600E254D3 /* HBMasterViewController.h */,
 				61ADD0481F00186600E254D3 /* HBMasterViewController.m */,
-				61ADD04A1F00186600E254D3 /* DetailViewController.h */,
-				61ADD04B1F00186600E254D3 /* DetailViewController.m */,
+				61ADD04A1F00186600E254D3 /* HBDetailViewController.h */,
+				61ADD04B1F00186600E254D3 /* HBDetailViewController.m */,
 				61ADD04D1F00186600E254D3 /* Main.storyboard */,
 				61ADD0501F00186600E254D3 /* Assets.xcassets */,
 				61ADD0521F00186600E254D3 /* LaunchScreen.storyboard */,
@@ -442,7 +442,7 @@
 				61ADD0431F00186600E254D3 /* main.m in Sources */,
 				61ADD08E1F00E03A00E254D3 /* HBImage.m in Sources */,
 				61ADD0791F00378D00E254D3 /* HBCharacterDataContainer.m in Sources */,
-				61ADD04C1F00186600E254D3 /* DetailViewController.m in Sources */,
+				61ADD04C1F00186600E254D3 /* HBDetailViewController.m in Sources */,
 				61ADD0871F005A0500E254D3 /* HBMarvelService.m in Sources */,
 				61ADD0701F002C0C00E254D3 /* HBCharacterDataWrapper.m in Sources */,
 				61ADD0931F00EA9900E254D3 /* HBCharacterTableViewCell.m in Sources */,
