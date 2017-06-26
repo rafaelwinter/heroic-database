@@ -10,7 +10,7 @@
 		131CC07C20186CB112C14D22 /* libPods-HeroicBaseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E439964DC14ABED2A61BA0 /* libPods-HeroicBaseTests.a */; };
 		61ADD0431F00186600E254D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0421F00186600E254D3 /* main.m */; };
 		61ADD0461F00186600E254D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0451F00186600E254D3 /* AppDelegate.m */; };
-		61ADD0491F00186600E254D3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0481F00186600E254D3 /* MasterViewController.m */; };
+		61ADD0491F00186600E254D3 /* HBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0481F00186600E254D3 /* HBMasterViewController.m */; };
 		61ADD04C1F00186600E254D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD04B1F00186600E254D3 /* DetailViewController.m */; };
 		61ADD04F1F00186600E254D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD04D1F00186600E254D3 /* Main.storyboard */; };
 		61ADD0511F00186600E254D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD0501F00186600E254D3 /* Assets.xcassets */; };
@@ -29,6 +29,7 @@
 		61ADD08B1F00859500E254D3 /* HBMarvelServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD08A1F00859400E254D3 /* HBMarvelServiceTests.m */; };
 		61ADD08E1F00E03A00E254D3 /* HBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD08D1F00E03A00E254D3 /* HBImage.m */; };
 		61ADD0901F00E0DA00E254D3 /* Image.json in Resources */ = {isa = PBXBuildFile; fileRef = 61ADD08F1F00E0DA00E254D3 /* Image.json */; };
+		61ADD0931F00EA9900E254D3 /* HBCharacterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61ADD0921F00EA9900E254D3 /* HBCharacterTableViewCell.m */; };
 		F92C2DC03EAA912B4E082B6E /* libPods-HeroicBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +49,8 @@
 		61ADD0421F00186600E254D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61ADD0441F00186600E254D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61ADD0451F00186600E254D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		61ADD0471F00186600E254D3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		61ADD0481F00186600E254D3 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		61ADD0471F00186600E254D3 /* HBMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMasterViewController.h; sourceTree = "<group>"; };
+		61ADD0481F00186600E254D3 /* HBMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMasterViewController.m; sourceTree = "<group>"; };
 		61ADD04A1F00186600E254D3 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		61ADD04B1F00186600E254D3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		61ADD04E1F00186600E254D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +79,8 @@
 		61ADD08C1F00E03A00E254D3 /* HBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBImage.h; sourceTree = "<group>"; };
 		61ADD08D1F00E03A00E254D3 /* HBImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBImage.m; sourceTree = "<group>"; };
 		61ADD08F1F00E0DA00E254D3 /* Image.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Image.json; sourceTree = "<group>"; };
+		61ADD0911F00EA9900E254D3 /* HBCharacterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCharacterTableViewCell.h; sourceTree = "<group>"; };
+		61ADD0921F00EA9900E254D3 /* HBCharacterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCharacterTableViewCell.m; sourceTree = "<group>"; };
 		6E8EEDA06C1B172FE0EDC013 /* Pods-HeroicBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBaseTests/Pods-HeroicBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AA0A773B9D7122EC53CB5B2 /* libPods-HeroicBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroicBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE69406FC5A1FA3D8F10CB7 /* Pods-HeroicBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroicBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroicBase/Pods-HeroicBase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,10 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				61ADD0711F002C1400E254D3 /* Model */,
+				61ADD0941F00EAC600E254D3 /* View */,
 				61ADD0441F00186600E254D3 /* AppDelegate.h */,
 				61ADD0451F00186600E254D3 /* AppDelegate.m */,
-				61ADD0471F00186600E254D3 /* MasterViewController.h */,
-				61ADD0481F00186600E254D3 /* MasterViewController.m */,
+				61ADD0471F00186600E254D3 /* HBMasterViewController.h */,
+				61ADD0481F00186600E254D3 /* HBMasterViewController.m */,
 				61ADD04A1F00186600E254D3 /* DetailViewController.h */,
 				61ADD04B1F00186600E254D3 /* DetailViewController.m */,
 				61ADD04D1F00186600E254D3 /* Main.storyboard */,
@@ -202,6 +206,15 @@
 				61ADD08F1F00E0DA00E254D3 /* Image.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		61ADD0941F00EAC600E254D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61ADD0911F00EA9900E254D3 /* HBCharacterTableViewCell.h */,
+				61ADD0921F00EA9900E254D3 /* HBCharacterTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		C9CC6C8896B971132091D04D /* Pods */ = {
@@ -425,13 +438,14 @@
 			files = (
 				61ADD0821F00412B00E254D3 /* HBCharacter.m in Sources */,
 				61ADD0461F00186600E254D3 /* AppDelegate.m in Sources */,
-				61ADD0491F00186600E254D3 /* MasterViewController.m in Sources */,
+				61ADD0491F00186600E254D3 /* HBMasterViewController.m in Sources */,
 				61ADD0431F00186600E254D3 /* main.m in Sources */,
 				61ADD08E1F00E03A00E254D3 /* HBImage.m in Sources */,
 				61ADD0791F00378D00E254D3 /* HBCharacterDataContainer.m in Sources */,
 				61ADD04C1F00186600E254D3 /* DetailViewController.m in Sources */,
 				61ADD0871F005A0500E254D3 /* HBMarvelService.m in Sources */,
 				61ADD0701F002C0C00E254D3 /* HBCharacterDataWrapper.m in Sources */,
+				61ADD0931F00EA9900E254D3 /* HBCharacterTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
