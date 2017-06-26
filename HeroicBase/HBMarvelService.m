@@ -64,6 +64,74 @@ static NSString *const kCharactersResource = @"characters";
                                              success:(HBCharacterRequestSuccess)successBlock
                                              failure:(HBCharacterRequestFailure)failureBlock
 {
+    NSString *resourcePath = kCharactersResource;
+    NSDictionary *params = [self buildParametersWithTimestamp:timestamp
+                                                    publicKey:publicKey
+                                                         hash:hash];
+    
+    return [self fetchCharacterWithPath:resourcePath
+                             parameters:params
+                                success:successBlock
+                                failure:failureBlock];
+}
+
+- (NSURLSessionDataTask *)characterListWithSuccess:(HBCharacterRequestSuccess)successBlock
+                                           failure:(HBCharacterRequestFailure)failureBlock
+{
+    NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString *hash = [self buildHashForTimestamp:timestamp
+                                      privateKey:self.privateAPIKey
+                                       publicKey:self.publicAPIKey];
+    
+    return [self characterListWithTimestamp:timestamp
+                                     APIKey:self.publicAPIKey
+                                       hash:hash
+                                    success:successBlock
+                                    failure:failureBlock];
+}
+
+- (NSURLSessionDataTask *)characterDetailWithId:(NSInteger)characterId
+                                      timestamp:(NSTimeInterval)timestamp
+                                         APIKey:(NSString *)publicKey
+                                           hash:(NSString *)hash
+                                        success:(HBCharacterRequestSuccess)successBlock
+                                        failure:(HBCharacterRequestFailure)failureBlock
+{
+    NSString *path = [NSString stringWithFormat:@"%@/%li", kCharactersResource, (long)characterId];
+    NSDictionary *params = [self buildParametersWithTimestamp:timestamp
+                                                    publicKey:publicKey
+                                                         hash:hash];
+    
+    return [self fetchCharacterWithPath:path
+                             parameters:params
+                                success:successBlock
+                                failure:failureBlock];
+}
+
+- (NSURLSessionDataTask *)characterDetailWithId:(NSInteger)characterId
+                                        success:(HBCharacterRequestSuccess)successBlock
+                                        failure:(HBCharacterRequestFailure)failureBlock
+{
+    NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970];
+    NSString *hash = [self buildHashForTimestamp:timestamp
+                                      privateKey:self.privateAPIKey
+                                       publicKey:self.publicAPIKey];
+    
+    return [self characterDetailWithId:characterId
+                             timestamp:timestamp
+                                APIKey:self.publicAPIKey
+                                  hash:hash
+                               success:successBlock
+                               failure:failureBlock];
+}
+
+#pragma mark - Common character request helper
+
+- (NSURLSessionDataTask *)fetchCharacterWithPath:(NSString *)resourcePath
+                                      parameters:(NSDictionary *)parameters
+                                         success:(HBCharacterRequestSuccess)successBlock
+                                         failure:(HBCharacterRequestFailure)failureBlock
+{
     void (^onSuccess)(NSURLSessionDataTask*, id) = ^(NSURLSessionDataTask *task, id responseObject) {
         
         NSError *error;
@@ -85,30 +153,11 @@ static NSString *const kCharactersResource = @"characters";
         }
     };
     
-    NSDictionary *params = [self buildParametersWithTimestamp:timestamp
-                                                    publicKey:publicKey
-                                                         hash:hash];
-    
-    return [self GET:kCharactersResource
-          parameters:params
+    return [self GET:resourcePath
+          parameters:parameters
             progress:nil
              success:onSuccess
              failure:onFailure];
-}
-
-- (NSURLSessionDataTask *)characterListWithSuccess:(HBCharacterRequestSuccess)successBlock
-                                           failure:(HBCharacterRequestFailure)failureBlock
-{
-    NSTimeInterval timestamp = [[NSDate date] timeIntervalSince1970];
-    NSString *hash = [self buildHashForTimestamp:timestamp
-                                      privateKey:self.privateAPIKey
-                                       publicKey:self.publicAPIKey];
-    
-    return [self characterListWithTimestamp:timestamp
-                                     APIKey:self.publicAPIKey
-                                       hash:hash
-                                    success:successBlock
-                                    failure:failureBlock];
 }
 
 #pragma mark - Request signing helpers

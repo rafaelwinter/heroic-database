@@ -76,7 +76,6 @@ static NSString *const kExpectedHash = @"5d37689dbbdedf38ca3c9b9c059a8836";
     [OHHTTPStubs onStubActivation:^(NSURLRequest * _Nonnull request, id<OHHTTPStubsDescriptor>  _Nonnull stub, OHHTTPStubsResponse * _Nonnull responseStub) {
         NSString *expectedURL = @"https://gateway.marvel.com/v1/public/characters?apikey=4c6f72656e6e61204c696e6461&hash=5d37689dbbdedf38ca3c9b9c059a8836&ts=330770700";
         if ([request.URL.absoluteString isEqualToString:expectedURL]) {
-            NSLog(@"AAAAAAAAAA");
             [expectation fulfill];
         }
     }];
@@ -138,6 +137,95 @@ static NSString *const kExpectedHash = @"5d37689dbbdedf38ca3c9b9c059a8836";
                             failure:^(NSError *error) {
                                 [expectation fulfill];
                             }];
+    
+    // then
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            XCTFail(@"Expectation not met with error: %@", error);
+        }
+    }];
+}
+
+- (void)testCharacterDetailShouldBuildCorrectURL {
+    
+    // given
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        return [request.URL.path isEqualToString:@"/v1/public/characters/250680"];
+    } withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
+        return [OHHTTPStubsResponse responseWithFileAtPath:OHPathForFile(@"GetCharacterResponseData.json",self.class)
+                                                statusCode:200 headers:@{@"Content-Type":@"application/json"}];
+    }];
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Request is built correctly"];
+    
+    // when
+    [OHHTTPStubs onStubActivation:^(NSURLRequest * _Nonnull request, id<OHHTTPStubsDescriptor> _Nonnull stub, OHHTTPStubsResponse * _Nonnull responseStub) {
+        NSString *expectedURL = @"https://gateway.marvel.com/v1/public/characters/250680?apikey=4c6f72656e6e61204c696e6461&hash=5d37689dbbdedf38ca3c9b9c059a8836&ts=330770700";
+        if ([request.URL.absoluteString isEqualToString:expectedURL]) {
+            [expectation fulfill];
+        }
+    }];
+    
+    [SUT characterDetailWithId:250680
+                     timestamp:kTimestamp APIKey:kPublicKey hash:kExpectedHash
+                       success:^(HBCharacterDataWrapper *response) { }
+                       failure:^(NSError *error) { }];
+    
+    // then
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            XCTFail(@"Expectation not met with error: %@", error);
+        }
+    }];
+}
+
+- (void)testCharacterDetailShouldLoadWithSuccess {
+    
+    // given
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        return [request.URL.path isEqualToString:@"/v1/public/characters/250680"];
+    } withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
+        return [OHHTTPStubsResponse responseWithFileAtPath:OHPathForFile(@"GetCharacterResponseData.json",self.class)
+                                                statusCode:200 headers:@{@"Content-Type":@"application/json"}];
+    }];
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Request works"];
+    
+    // when
+    [SUT characterDetailWithId:250680
+                     timestamp:kTimestamp APIKey:kPublicKey hash:kExpectedHash
+                       success:^(HBCharacterDataWrapper *response) {
+                           [expectation fulfill];
+                       }
+                       failure:^(NSError *error) { }];
+    
+    // then
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            XCTFail(@"Expectation not met with error: %@", error);
+        }
+    }];
+}
+
+- (void)testCharacterDetailShouldFailWithServerError {
+    
+    // given
+    NSError *HTTPStatus500Error = [NSError errorWithDomain:NSURLErrorDomain code:kCFURLErrorBadServerResponse userInfo:nil];
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        return [request.URL.path isEqualToString:@"/v1/public/characters/250680"];
+    } withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
+        return [OHHTTPStubsResponse responseWithError:HTTPStatus500Error];
+    }];
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Request fails"];
+    
+    // when
+    [SUT characterDetailWithId:250680
+                     timestamp:kTimestamp APIKey:kPublicKey hash:kExpectedHash
+                       success:^(HBCharacterDataWrapper *response) { }
+                       failure:^(NSError *error) {
+                           [expectation fulfill];
+                       }];
     
     // then
     [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {

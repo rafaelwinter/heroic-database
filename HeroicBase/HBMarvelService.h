@@ -27,6 +27,9 @@ typedef void (^HBCharacterRequestFailure)(NSError *error);
 /**
  Fetches lists of Marvel comics characters.
  
+ @param timestamp The request timestamp.
+ @param publicKey The Marvel Comics API public key.
+ @param hash The authentication hash.
  @param successBlock A block that is executed when the task finishes successfully.
  @param failureBlock A block that is executed when the task finishes with error.
  @return A NSURLSessionDataTask object with the request
@@ -46,5 +49,35 @@ typedef void (^HBCharacterRequestFailure)(NSError *error);
  */
 - (NSURLSessionDataTask *)characterListWithSuccess:(HBCharacterRequestSuccess)successBlock
                                            failure:(HBCharacterRequestFailure)failureBlock;
+
+/**
+ This method fetches a single character resource.
+ 
+ @param characterId A single character identifier.
+ @param timestamp The request timestamp.
+ @param publicKey The Marvel Comics API public key.
+ @param hash The authentication hash.
+ @param successBlock A block that is executed when the task finishes successfully.
+ @param failureBlock A block that is executed when the task finishes with error.
+ @return A NSURLSessionDataTask object with the request
+ */
+- (NSURLSessionDataTask *)characterDetailWithId:(NSInteger)characterId
+                                      timestamp:(NSTimeInterval)timestamp
+                                         APIKey:(NSString *)publicKey
+                                           hash:(NSString *)hash
+                                        success:(HBCharacterRequestSuccess)successBlock
+                                        failure:(HBCharacterRequestFailure)failureBlock;
+
+/**
+ This method fetches a single character resource.
+ 
+ @param characterId A single character identifier.
+ @param successBlock A block that is executed when the task finishes successfully.
+ @param failureBlock A block that is executed when the task finishes with error.
+ @return A NSURLSessionDataTask object with the request
+ */
+- (NSURLSessionDataTask *)characterDetailWithId:(NSInteger)characterId
+                                        success:(HBCharacterRequestSuccess)successBlock
+                                        failure:(HBCharacterRequestFailure)failureBlock;
 
 @end
