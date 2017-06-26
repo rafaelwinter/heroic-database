@@ -134,17 +134,19 @@ static NSString *const kCharactersResource = @"characters";
 {
     void (^onSuccess)(NSURLSessionDataTask*, id) = ^(NSURLSessionDataTask *task, id responseObject) {
         
-        NSError *error;
-        
-        if (error) {
-            if (failureBlock) {
-                failureBlock(error);
-            }
-        } else {
-            if (successBlock) {
-                successBlock(responseObject);
+        if (successBlock) {
+            NSError *error;
+            HBCharacterDataWrapper *response = [[HBCharacterDataWrapper alloc] initWithDictionary:responseObject
+                                                                                            error:&error];
+            if (error) {
+                if (failureBlock) {
+                    failureBlock(error);
+                }
+            } else {
+                successBlock(response);
             }
         }
+        
     };
     
     void (^onFailure)(NSURLSessionDataTask*, NSError*) = ^(NSURLSessionDataTask *task, NSError *error) {
