@@ -10,6 +10,7 @@
 #import "HBCharacterDataWrapper.h"
 #import "HBCharacterDataContainer.h"
 #import "HBCharacter.h"
+#import "HBImage.h"
 
 @interface HBCharacterModelTests : HBTestCase
 
@@ -104,8 +105,33 @@
     XCTAssertEqual(container.count, results.count);
     
     for (HBCharacter *character in results) {
-        XCTAssert([character isKindOfClass:[HBCharacter class]]);
+        XCTAssertTrue([character isKindOfClass:[HBCharacter class]]);
+        if (character.thumbnail) {
+            XCTAssertTrue([character.thumbnail isKindOfClass:[HBImage class]]);
+        }
     }
+}
+
+- (void)testImageShouldLoadFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"Image"];
+    
+    NSError *err;
+    HBImage *SUT = [[HBImage alloc] initWithString:contents
+                                             error:&err];
+    
+    XCTAssertNil(err, "%@", [err localizedDescription]);
+    XCTAssertNotNil(SUT, @"Could not initialize HBImage with JSON data.");
+}
+
+- (void)testImageShouldLoadFieldsFromJSON {
+    NSString *contents = [self loadJSONFromResource:@"Image"];
+    
+    NSError *err;
+    HBImage *SUT = [[HBImage alloc] initWithString:contents
+                                             error:&err];
+    
+    XCTAssertEqualObjects(@"http://i.annihil.us/u/prod/marvel/i/mg/a/f0/5202887448860", SUT.path);
+    XCTAssertEqualObjects(@"jpg", SUT.extension);
 }
 
 @end

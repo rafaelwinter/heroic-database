@@ -8,6 +8,8 @@
 
 #import <JSONModel/JSONModel.h>
 
+@class HBImage;
+
 @interface HBCharacter : JSONModel
 
 /**
@@ -26,5 +28,11 @@
  A short bio or description of the character.
  */
 @property (strong, nonatomic) NSString *shortBio;
+
+
+/**
+ The representative image for this character.
+ */
+@property (strong, nonatomic) HBImage <Optional> *thumbnail;
 
 @end

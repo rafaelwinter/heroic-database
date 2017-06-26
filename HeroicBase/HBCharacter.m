@@ -15,6 +15,7 @@
         @"characterId": @"id",
         @"name": @"name",
         @"shortBio": @"description",
+        @"thumbnail": @"thumbnail",
     }];
 }
 
