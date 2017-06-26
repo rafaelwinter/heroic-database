@@ -15,9 +15,13 @@
 #import "HBCharacterDataWrapper.h"
 #import "HBCharacterDataContainer.h"
 #import "HBCharacter.h"
+#import "HBImage.h"
 
 // Views
 #import "HBCharacterTableViewCell.h"
+
+// Utilities
+#import "UIImageView+AFNetworking.h"
 
 @interface HBMasterViewController ()
 
@@ -97,7 +101,9 @@
                                                                      forIndexPath:indexPath];
 
     HBCharacter *object = self.objects[indexPath.row];
+    
     cell.name.text = object.name;
+    [cell.thumbnail setImageWithURL:[NSURL URLWithString:object.thumbnail.standardMediumPath]];
     
     return cell;
 }
